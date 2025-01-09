@@ -5,4 +5,4 @@
 1. Manejo de Transacciones 
 1. Base de Datos NoSQL 
 
-![Base de Datos](./images/imagen1.jpg)
+![Base de Datos](./images/imagen1.jpg)# bdnegociosdigitales2025
