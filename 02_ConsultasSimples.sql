@@ -343,3 +343,58 @@ where UnitPrice between 5 and 20 and CategoryID in ('1','2','3')
  from Employees
  where FirstName like 'A__'
 
+ --seleccionar los productos que comiencen con A o B 
+ select * from 
+ Products 
+ where ProductName like '[A-M]%'
+
+  select * from 
+ Products 
+ where ProductName like '[ABC]%'
+
+ --Seleccionar todos los productos que no comiencen con A O B 
+ select * from 
+ Products 
+ where ProductName like '[^AB]%'
+
+ --seleccionar todos los productos donde el nombre comience con a pero no contenga la e 
+ select * from 
+ Products 
+ where ProductName like 'a[^e]%'
+
+ --Clausula order by
+ 
+ select ProductID, ProductName, UnitPrice, UnitsInStock 
+ from Products
+ order by UnitPrice desc
+
+ select ProductID, ProductName, UnitPrice, UnitsInStock 
+ from Products
+ order by 3 desc
+
+ select ProductID, ProductName, UnitPrice as 'Precio', UnitsInStock 
+ from Products
+ order by 'Precio' desc
+
+ --Seleccionar los clientes ordenandos por el pais y dentro por 
+ --cuidad 
+ select CustomerID, Country, City
+ from Customers
+ where Country in ('Brazil', 'Germany')
+ order by country asc, city desc
+ 
+ 
+ select CustomerID, Country, City
+ from Customers
+ where (Country = 'Brazil' or country = 'Germany')
+ and region is not null 
+ order by country asc, city desc
+
+ select CustomerID, Country, City
+ from Customers
+ where Country in ('Brazil', 'Germany')
+ order by country asc, city desc
+ 
+
+
+  
