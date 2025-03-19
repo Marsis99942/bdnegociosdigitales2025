@@ -295,7 +295,7 @@ order by 1 asc, t.TerritoryDescription desc
  --17.Obtener la cantidad total de productos vendidos por 
  --proveedor 
 
- select  s.CompanyName as [Provedor], 
+ select  s.CompanyName as [Provedor]
  from Suppliers as s 
  inner join Products as p 
  on s.SupplierID = p.SupplierID
@@ -307,10 +307,11 @@ group by s.CompanyName
  --18. Obtener la cantidad de pedidos enviados por cada 
  --empresa de tranporte 
 
- select count(*) as [Transportista], count(*) as [Total de Pedidos]
+ select s.CompanyName as [Transportista], count(*) as [Total de Pedidos]
  from Orders as o 
  inner join Shippers as s 
- on o.ShipVia 
+ on o.ShipVia = s.ShipperID
+ group by s.CompanyName
 
 
 select * from Orders 
