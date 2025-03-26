@@ -47,10 +47,10 @@ from employees;
 
 select*, (UnitPrice * Quantity) as importe from [Order Details]
 
---selecionar las fechas de orden, año, mes y dia, el cliente 
+--selecionar las fechas de orden, aï¿½o, mes y dia, el cliente 
 --que las ordeno y el empleado que la realizo
 
-select OrderDate,year(OrderDate) as año , month(OrderDate) as mes , day (OrderDate) as dia,
+select OrderDate,year(OrderDate) as aï¿½o , month(OrderDate) as mes , day (OrderDate) as dia,
 CustomerID, EmployeeID from Orders;
 
  --filas Duplicadas (Distinct)
@@ -180,7 +180,7 @@ select * from Employees
 where year (BirthDate)>= 1955 and year (BirthDate)<+1958 and City = 'London';
 
 --Seleccionar los Pedidos con flete de peso (Freight) mayor a $100
---y enviados a francia o España
+--y enviados a francia o Espaï¿½a
 
 Select OrderID, OrderDate, Freight, ShipCountry 
 from Orders
