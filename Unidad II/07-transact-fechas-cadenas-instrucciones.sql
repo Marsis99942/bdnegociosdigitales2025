@@ -54,16 +54,21 @@ set  CompanyName = Upper(CompanyName)
 where country in ('Mexico', 'Germany')
 select * from Customers
 
---Trim -> Quita espacios en blanco de una cadena 
-SELECT TRIM('    test     ') as Result;
+-- Trim -> Quita espacios en blanco de una cadena
+SELECT TRIM( '     test    ') AS Result;
 
-DECLARE @Texto
+DECLARE @Texto2 varchar(50) = '   Hola,Mundo!     ';
+SELECT LTRIM(@Texto2) AS Result;
 
-select companyName, len(CompanyName) as 'Numero de caracteres',
-LEFT (CompanyName, 4) AS inicio,
-RIGHT(CompanyName, 6) as Final,
-SUBSTRING(CompanyName, 7,4) as 'Subcadena'
+SELECT LTRIM('     Five spaces are at the beginning of this string.');
+SELECT TRIM('  Five spaces are at the beginning of this string.       ');
+
+select companyname, len(CompanyName) as 'Numero de Caracteres',
+LEFT(CompanyName, 4) as Inicio, 
+RIGHT(CompanyName, 6) as Final, 
+SUBSTRING(CompanyName,7,4) as 'SubCadena'
 from Customers
+GO
 
 
 
