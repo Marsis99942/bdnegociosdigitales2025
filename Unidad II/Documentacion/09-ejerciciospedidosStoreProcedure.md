@@ -84,6 +84,7 @@ exec spu_realizar_pedido @numPedido = 113071, @cliente = 2117,
 
 select * from Productos
 where Id_fab = 'ACI'and Id_producto = '4100x'
-```
-sql
+
+
+``` sql
 ```
