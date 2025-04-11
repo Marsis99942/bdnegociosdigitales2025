@@ -661,13 +661,13 @@ db.libros.find({}).limit(2)
 
 db.libros.find({}).skip()
 
-
+```
 ### Otros métodos (skip, limit, size)
 
 ### Borrar colecciones y base de datos
 
 db.libros.drop()
-
+  
 
 
 
